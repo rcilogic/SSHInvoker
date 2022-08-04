@@ -1,7 +1,7 @@
 # SSHInvoker
 
 ## Description
-This package provides the ability to send commands to remote SSH server and receive data from it using swift-nio-ssh.
+This package provides the ability to send commands to remote SSH server and receive data from it using [swift-nio-ssh](https://github.com/apple/swift-nio-ssh).
 
 ## Installation with Swift Package Manager
 Add: `.package(url: "https://github.com/rcilogic/SSHInvoker.git", from: "0.0.1" )`
