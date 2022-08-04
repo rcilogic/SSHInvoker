@@ -32,6 +32,9 @@ let package = Package(
                 .product(name: "NIO", package: "swift-nio"),
                 .product(name: "NIOSSH", package: "swift-nio-ssh")
             ]),
+        .executableTarget(
+            name: "Example",
+            dependencies: ["SSHInvoker"]),
         .testTarget(
             name: "SSHInvokerTests",
             dependencies: ["SSHInvoker"]),

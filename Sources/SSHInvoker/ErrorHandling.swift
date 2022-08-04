@@ -19,6 +19,8 @@ extension SSHInvoker {
         case scriptExecutionTimeout
         case invalidEnteredServerPublicKey
         case disallowedRemoteServerPublicKey
+        case invalidHostname
+        case invalidPort
     }
 }
 

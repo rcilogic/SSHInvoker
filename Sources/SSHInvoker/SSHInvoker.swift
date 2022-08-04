@@ -75,6 +75,9 @@ public struct SSHInvoker {
         inboundStreamHandler: InboundStreamHandler? = nil
     ) -> EventLoopFuture<Result?>
     {
+        guard target.host != "" else {  return group.next().makeFailedFuture(Error.invalidHostname) }
+        guard (0...65_535).contains(target.port) else { return group.next().makeFailedFuture(Error.invalidPort) }
+                
         let invokerErrorHandler = InvokerErrorHandler()
         
         //MARK: Client bootstrap
